@@ -1,5 +1,5 @@
 package io.jetform.core.enums;
 
-public enum CTAType {
+public enum Type {
 	BUTTON,LINK,TEXT
 }

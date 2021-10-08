@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import io.jetform.core.annotation.FormElement;
 import io.jetform.core.annotation.model.FormFieldBase;
-import io.jetform.core.annotation.model.FormFieldWrapper;
+import io.jetform.core.annotation.model.ElementWrapper;
 
 public class ScanEntity {
 	// static Gson gson = new Gson();
@@ -137,7 +137,7 @@ public class ScanEntity {
 
 	}
 
-	static void populateFields(FormFieldBase form, List<FormFieldWrapper> fieldWrappers, FormElement formField,
+	static void populateFields(FormFieldBase form, List<ElementWrapper> fieldWrappers, FormElement formField,
 			Field field) {
 		// TextWrapper wrapper = new TextWrapper(formField);
 		if (formField.id().equals("")) {

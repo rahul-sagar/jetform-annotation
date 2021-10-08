@@ -40,8 +40,6 @@ public class SelectWrapper extends FormElementWrapper {
 		this.setName(formField.name());
 		this.setReadOnly(formField.readOnly());
 		this.setDisabled(formField.disabled());
-		this.setRequired(formField.required());
-		this.setErrorMessage(formField.errorMessage());
 		this.setValue(formField.value());
 		this.setFieldType(FieldType.SELECT.name());
 		this.setListable(formField.listable());
@@ -69,18 +67,6 @@ public class SelectWrapper extends FormElementWrapper {
 			this.setDataProvider(new DataProvider(select));
 		}
 	}
-
-	/*
-	 * public String getCallBackUrl() { return callBackUrl; }
-	 * 
-	 * public void setCallBackUrl(String callBackUrl) { this.callBackUrl =
-	 * callBackUrl; }
-	 * 
-	 * public SelectionType getSelectionType() { return selectionType; }
-	 * 
-	 * public void setSelectionType(SelectionType selectionType) {
-	 * this.selectionType = selectionType; }
-	 */
 	
 	public DataProvider getDataProvider() {
 		return dataProvider;
@@ -96,15 +82,6 @@ public class SelectWrapper extends FormElementWrapper {
 
 	public void setMultiSelect(boolean multiSelect) {
 		this.multiSelect = multiSelect;
-	}
-
-	@Override
-	public String toString() {
-		return "SelectWrapper [dataProvider=" + dataProvider + ", multiSelect=" + multiSelect + ", options="
-				+ Arrays.toString(options) + ", id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
-				+ ", placeHolder=" + placeHolder + ", errorMessage=" + errorMessage + ", required=" + required
-				+ ", readOnly=" + readOnly + ", disabled=" + disabled + ", listable=" + listable + ", fieldType="
-				+ fieldType + ", validtions=" + validtions + "]";
 	}
 	
 }

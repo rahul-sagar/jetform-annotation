@@ -5,20 +5,20 @@ import java.util.List;
 
 import io.jetform.core.enums.FieldType;
 
-public class FormElementWrapper implements FormFieldWrapper{
+public class FormElementWrapper implements ElementWrapper{
 
 	protected String id;
 	protected String name;
 	protected String label;
 	protected String value="";
 	protected String placeHolder="";
-	protected String errorMessage="";
-	protected boolean required=false;
+
 	protected boolean readOnly=false;
 	protected boolean disabled=false;
 	protected boolean listable=false;
 	protected String fieldType=FieldType.TEXT.name();
-	protected List<Validation> validtions = new ArrayList<>();
+	protected List<Validation> validations = new ArrayList<>();
+	
 	public String getId() {
 		return id;
 	}
@@ -49,18 +49,7 @@ public class FormElementWrapper implements FormFieldWrapper{
 	public void setPlaceHolder(String placeHolder) {
 		this.placeHolder = placeHolder;
 	}
-	public String getErrorMessage() {
-		return errorMessage;
-	}
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
-	}
-	public boolean isRequired() {
-		return required;
-	}
-	public void setRequired(boolean required) {
-		this.required = required;
-	}
+	
 	public boolean isReadOnly() {
 		return readOnly;
 	}
@@ -85,12 +74,12 @@ public class FormElementWrapper implements FormFieldWrapper{
 	public void setFieldType(String fieldType) {
 		this.fieldType = fieldType;
 	}
-	public List<Validation> getValidtions() {
-		return validtions;
+	public List<Validation> getValidations() {
+		return validations;
 	}
-	public void setValidtions(List<Validation> validtions) {
-		this.validtions = validtions;
+	public void setValidations(List<Validation> validations) {
+		this.validations = validations;
 	}
-	
+
 	
 }

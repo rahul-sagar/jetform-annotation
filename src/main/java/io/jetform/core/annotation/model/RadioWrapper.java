@@ -32,8 +32,6 @@ public class RadioWrapper extends FormElementWrapper {
 		setName(formField.name());
 		setReadOnly(formField.readOnly());
 		setDisabled(formField.disabled());
-		setRequired(formField.required());
-		setErrorMessage(formField.errorMessage());
 		setValue(formField.value());
 		setFieldType(FieldType.RADIO.name());
 		setListable(formField.listable());

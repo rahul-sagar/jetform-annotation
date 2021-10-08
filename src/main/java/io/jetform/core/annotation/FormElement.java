@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 import org.springframework.core.annotation.AliasFor;
 
 import io.jetform.core.annotation.model.FormFieldBase;
-import io.jetform.core.annotation.model.FormFieldWrapper;
+import io.jetform.core.annotation.model.ElementWrapper;
 import io.jetform.core.enums.FieldType;
 import io.jetform.core.enums.LoadType;
 import io.jetform.core.enums.ResourceType;

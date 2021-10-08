@@ -6,7 +6,7 @@ import java.util.List;
 import io.jetform.core.enums.FieldType;
 
 
-public class FormFieldBase implements FormFieldWrapper{
+public class FormFieldBase implements ElementWrapper{
 	protected String id;
 	protected String name;
 	protected String label;
@@ -98,6 +98,11 @@ public class FormFieldBase implements FormFieldWrapper{
 	}
 	public void setValidtions(List<Validation> validtions) {
 		this.validtions = validtions;
+	}
+	@Override
+	public List<Validation> getValidations() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

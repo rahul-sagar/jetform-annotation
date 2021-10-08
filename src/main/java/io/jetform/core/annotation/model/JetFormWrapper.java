@@ -8,8 +8,8 @@ public class JetFormWrapper {
 	private String id;
 	private String name;
 	private String title;
-	private List<FormAction> formAction;
-	private List<FormElementWrapper> formElementWrappers;
+	private List<FormActionWrapper> actions;
+	private List<FormElementWrapper> elements;
 
 	public JetFormWrapper(JetForm jetForm){
 		this.id = jetForm.id();
@@ -41,20 +41,22 @@ public class JetFormWrapper {
 		this.title = title;
 	}
 
-	public List<FormAction> getFormAction() {
-		return formAction;
+	public List<FormActionWrapper> getActions() {
+		return actions;
 	}
 
-	public void setFormAction(List<FormAction> formAction) {
-		this.formAction = formAction;
+	public void setActions(List<FormActionWrapper> actions) {
+		this.actions = actions;
 	}
 
-	public List<FormElementWrapper> getFormElementWrappers() {
-		return formElementWrappers;
+	public List<FormElementWrapper> getElements() {
+		return elements;
 	}
 
-	public void setFormElementWrappers(List<FormElementWrapper> formElementWrappers) {
-		this.formElementWrappers = formElementWrappers;
+	public void setElements(List<FormElementWrapper> elements) {
+		this.elements = elements;
 	}
 
+	
+	
 }

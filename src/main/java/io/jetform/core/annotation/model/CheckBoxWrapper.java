@@ -30,8 +30,6 @@ public class CheckBoxWrapper extends FormElementWrapper {
 		setName(formField.name());
 		setReadOnly(formField.readOnly());
 		setDisabled(formField.disabled());
-		setRequired(formField.required());
-		setErrorMessage(formField.errorMessage());
 		setValue(formField.value());
 		setFieldType(FieldType.CHECKBOX.name());
 		setListable(formField.listable());

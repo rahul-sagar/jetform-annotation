@@ -1,14 +1,14 @@
 package io.jetform.core.helperclasses;
 
 import io.jetform.core.enums.Action;
-import io.jetform.core.enums.CTAType;
+import io.jetform.core.enums.Type;
 import io.jetform.core.enums.FormActionType;
 
 public class FormAction {
 	private String URL;
 	private Action action = Action.CREATE;
 	private FormActionType type = FormActionType.CRUD;
-	private CTAType ctaType = CTAType.BUTTON;
+	private Type ctaType = Type.BUTTON;
 	///private boolean listable = true;
 	private String buttonOrLinkValue;
 
@@ -42,11 +42,11 @@ public class FormAction {
 		this.type = type;
 	}
 
-	public CTAType getCtaType() {
+	public Type getCtaType() {
 		return ctaType;
 	}
 
-	public void setCtaType(CTAType ctaType) {
+	public void setCtaType(Type ctaType) {
 		this.ctaType = ctaType;
 	}
 
