@@ -16,7 +16,7 @@ public class JetFormWrapper {
 		this.name = jetForm.name();
 		this.title = jetForm.title();
 	}
-	
+
 	public String getId() {
 		return id;
 	}

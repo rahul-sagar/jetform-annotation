@@ -5,8 +5,11 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Retention;
 
+import org.springframework.stereotype.Component;
+
 @Retention(RUNTIME)
 @java.lang.annotation.Target(TYPE)
+@Component
 public @interface JetForm {
     String id() default "";
     String name() default "";
