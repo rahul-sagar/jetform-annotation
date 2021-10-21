@@ -57,6 +57,12 @@ public class JetFormWrapper {
 		this.elements = elements;
 	}
 
+	@Override
+	public String toString() {
+		return "JetFormWrapper [id=" + id + ", name=" + name + ", title=" + title + ", actions=" + actions
+				+ ", elements=" + elements + "]";
+	}
+
 	
 	
 }
