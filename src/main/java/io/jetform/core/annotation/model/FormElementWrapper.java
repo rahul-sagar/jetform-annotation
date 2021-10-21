@@ -80,6 +80,12 @@ public class FormElementWrapper implements ElementWrapper{
 	public void setValidations(List<Validation> validations) {
 		this.validations = validations;
 	}
+	@Override
+	public String toString() {
+		return "FormElementWrapper [id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
+				+ ", placeHolder=" + placeHolder + ", readOnly=" + readOnly + ", disabled=" + disabled + ", listable="
+				+ listable + ", fieldType=" + fieldType + ", validations=" + validations + "]";
+	}
 
 	
 }
