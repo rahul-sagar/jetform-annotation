@@ -39,6 +39,7 @@ public @interface FormElement {
 	
 	Form form() default @Form(childKey = "",parentKey = "");
 	Text text() default @Text();
+	Hidden hidden() default @Hidden;
 	Select select() default @Select();
 	Number number() default @Number();
 	Email email() default @Email();

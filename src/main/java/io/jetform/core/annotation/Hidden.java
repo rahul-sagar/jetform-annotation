@@ -29,5 +29,4 @@ public @interface Hidden {
 
 	String value() default "";
 	
-
 }
