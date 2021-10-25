@@ -34,7 +34,7 @@ public @interface FormElement {
 	boolean required() default false;
 	boolean readOnly() default false;
 	boolean disabled() default false;
-	boolean listable() default false;
+	boolean listable() default true;
 	
 	
 	Form form() default @Form(childKey = "",parentKey = "");
