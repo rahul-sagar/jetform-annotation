@@ -8,6 +8,8 @@ public class JetFormWrapper {
 	private String id;
 	private String name;
 	private String title;
+	private boolean listIndex;
+	private boolean selectable;
 	private List<FormActionWrapper> actions;
 	private List<FormElementWrapper> elements;
 
@@ -15,6 +17,8 @@ public class JetFormWrapper {
 		this.id = jetForm.id();
 		this.name = jetForm.name();
 		this.title = jetForm.title();
+		this.listIndex=jetForm.listIndex();
+		this.selectable=jetForm.selectable();
 	}
 
 	public String getId() {
@@ -57,12 +61,26 @@ public class JetFormWrapper {
 		this.elements = elements;
 	}
 
-	@Override
-	public String toString() {
-		return "JetFormWrapper [id=" + id + ", name=" + name + ", title=" + title + ", actions=" + actions
-				+ ", elements=" + elements + "]";
+	
+	public boolean isListIndex() {
+		return listIndex;
 	}
 
-	
-	
+	public void setListIndex(boolean listIndex) {
+		this.listIndex = listIndex;
+	}
+
+	public boolean isSelectable() {
+		return selectable;
+	}
+
+	public void setSelectable(boolean selectable) {
+		this.selectable = selectable;
+	}
+
+	@Override
+	public String toString() {
+		return "JetFormWrapper [id=" + id + ", name=" + name + ", title=" + title + ", listIndex=" + listIndex
+				+ ", selectable=" + selectable + ", actions=" + actions + ", elements=" + elements + "]";
+	}	
 }

@@ -14,5 +14,7 @@ public @interface JetForm {
     String id() default "";
     String name() default "";
     String title() default "";
+    boolean listIndex() default true;
+    boolean selectable() default true;
     FormAction [] actions();
 }
