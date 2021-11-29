@@ -43,6 +43,7 @@ public @interface FormElement {
 	Select select() default @Select();
 	Number number() default @Number();
 	Email email() default @Email();
+	Image image() default @Image();
 	Radio radio() default @Radio(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));	
 	Checkbox checkbox() default @Checkbox(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));
 	Validation[] validations() default {};
