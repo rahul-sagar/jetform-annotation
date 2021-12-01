@@ -7,12 +7,13 @@ import java.lang.annotation.Target;
 
 import io.jetform.core.enums.LoadType;
 import io.jetform.core.enums.ResourceType;
+import io.jetform.core.enums.UploadType;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 @EnableFormBuilder
-public @interface Image {
+public @interface Upload {
 
-	DataProvider dataProvider() default @DataProvider(path="",loadType=LoadType.LAZY,resource=ResourceType.FILE);
-	String alt() default "Required image is not available";
+	DataProvider dataProvider() default @DataProvider(resource=ResourceType.FILE);
+	UploadType type();
 }

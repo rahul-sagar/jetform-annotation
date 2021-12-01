@@ -5,19 +5,13 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-import java.lang.annotation.Annotation;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import org.springframework.core.annotation.AliasFor;
-
-import io.jetform.core.annotation.model.FormFieldBase;
-import io.jetform.core.annotation.model.ElementWrapper;
-import io.jetform.core.enums.FieldType;
 import io.jetform.core.enums.LoadType;
 import io.jetform.core.enums.ResourceType;
-import io.jetform.core.enums.ValidationType;
+import io.jetform.core.enums.UploadType;
 
 @Radio
 @Documented
@@ -43,8 +37,7 @@ public @interface FormElement {
 	Select select() default @Select();
 	Number number() default @Number();
 	Email email() default @Email();
-	Image image() default @Image();
-	Radio radio() default @Radio(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));	
+	Upload upload() default @Upload(dataProvider=@DataProvider(loadType=LoadType.LAZY,path="",resource=ResourceType.FILE),type=UploadType.IMAGE);	Radio radio() default @Radio(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));	
 	Checkbox checkbox() default @Checkbox(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));
 	Date date() default @Date();
 	Validation[] validations() default {};
