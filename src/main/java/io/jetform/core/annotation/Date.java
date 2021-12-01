@@ -27,14 +27,5 @@ import java.lang.annotation.Target;
 @Target(FIELD)
 @EnableFormBuilder
 public @interface Date {
-	    String label() default "";
-		
-		String placeHolder() default "Select date...";
-		
-	    boolean required() default false;
-		
-		String errorMessage() default "";
-	    
-	
-	
+	    String format() default "";
 }

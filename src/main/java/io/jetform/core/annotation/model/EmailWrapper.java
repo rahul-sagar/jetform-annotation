@@ -10,19 +10,19 @@ public class EmailWrapper extends FormElementWrapper {
 
 	public EmailWrapper() {}
 	
-	public EmailWrapper(FormElement formField) {
+	public EmailWrapper(FormElement formElement) {
 
-		setId(formField.id());
-		setLabel(formField.label());
-		setPlaceHolder(formField.placeHolder());
-		setName(formField.name());
-		setReadOnly(formField.readOnly());
-		setDisabled(formField.disabled());
-		setValue(formField.value());
+		setId(formElement.id());
+		setLabel(formElement.label());
+		setPlaceHolder(formElement.placeHolder());
+		setName(formElement.name());
+		setReadOnly(formElement.readOnly());
+		setDisabled(formElement.disabled());
+		setValue(formElement.value());
 		setFieldType(FieldType.EMAIL.name());
-		setListable(formField.listable());
-		setPattern(formField.email().pattern());
-		setValidations(FormBuilderUtils.getValidations(formField));
+		setListable(formElement.listable());
+		setPattern(formElement.email().pattern());
+		setValidations(FormBuilderUtils.getValidations(formElement));
 	}
 	public EmailWrapper(Email email) {
 		setFieldType(FieldType.EMAIL.name());
