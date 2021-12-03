@@ -13,7 +13,8 @@ import io.jetform.core.enums.UploadType;
 @Target(ElementType.FIELD)
 @EnableFormBuilder
 public @interface Upload {
-
-	DataProvider dataProvider() default @DataProvider(resource=ResourceType.FILE);
+	
 	UploadType type();
+	DataProvider dataProvider() default @DataProvider(resource=ResourceType.FILE);
+	
 }

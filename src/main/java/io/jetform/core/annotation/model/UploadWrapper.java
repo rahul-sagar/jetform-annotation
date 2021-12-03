@@ -7,25 +7,10 @@ import io.jetform.core.enums.UploadType;
 
 public class UploadWrapper extends FormElementWrapper {
 	
-	private DataProvider dataProvider;
+
 	private UploadType  type;
+	private DataProvider dataProvider;
 	
-	public DataProvider getDataProvider() {
-		return dataProvider;
-	}
-	
-	public void setDataProvider(DataProvider dataProvider) {
-		this.dataProvider = dataProvider;
-	}
-	
-	public UploadType getType() {
-		return type;
-	}
-
-	public void setType(UploadType type) {
-		this.type = type;
-	}
-
 	public UploadWrapper() {
 
 	}
@@ -47,4 +32,25 @@ public class UploadWrapper extends FormElementWrapper {
 			setType(formField.upload().type());
 	}
 
+	
+	public UploadType getType() {
+		return type;
+	}
+
+	public void setType(UploadType type) {
+		this.type = type;
+	}
+	public DataProvider getDataProvider() {
+		return dataProvider;
+	}
+	
+	public void setDataProvider(DataProvider dataProvider) {
+		this.dataProvider = dataProvider;
+	}
+
+	@Override
+	public String toString() {
+		return "UploadWrapper [type=" + type + ", dataProvider=" + dataProvider + "]";
+	}
+	
 }
