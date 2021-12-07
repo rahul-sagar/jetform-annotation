@@ -29,7 +29,7 @@ public @interface FormElement {
 	boolean readOnly() default false;
 	boolean disabled() default false;
 	boolean listable() default true;
-	
+	boolean autocomplete() default false;
 	
 	Form form() default @Form(childKey = "",parentKey = "");
 	Text text() default @Text();

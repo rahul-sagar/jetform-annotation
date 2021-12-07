@@ -17,6 +17,7 @@ public class FormFieldBase implements ElementWrapper{
 	protected boolean readOnly=false;
 	protected boolean disabled=false;
 	protected boolean listable=false;
+	protected boolean autoComplete=false;
 	protected String fieldType=FieldType.TEXT.name();
 	protected List<Validation> validtions = new ArrayList<>();
 	
@@ -104,6 +105,12 @@ public class FormFieldBase implements ElementWrapper{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
+	public boolean isAutoComplete() {
+		// TODO Auto-generated method stub
+		return this.autoComplete;
+	}
+ 
+	public void setAutoComplete(boolean autoComplete) {
+		this.autoComplete = autoComplete;
+	}
 }

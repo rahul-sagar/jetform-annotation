@@ -10,6 +10,7 @@ public interface ElementWrapper {
 	public boolean isReadOnly();
 	public boolean isDisabled();
 	public boolean isListable();
+	public boolean isAutoComplete();
 	public String getFieldType();
 	public String getValue();
 	public List<Validation> getValidations(); 
