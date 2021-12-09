@@ -9,5 +9,7 @@ import java.lang.annotation.Retention;
 @Retention(RUNTIME)
 @java.lang.annotation.Target(TYPE)
 public @interface EnableFormBuilder {
+	
 	String entityPackage() default ""; 
+	
 }

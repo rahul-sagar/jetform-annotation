@@ -14,7 +14,6 @@ import io.jetform.core.enums.UploadType;
 @EnableFormBuilder
 public @interface Upload {
 	
-	UploadType type();
-	DataProvider dataProvider() default @DataProvider(resource=ResourceType.FILE);
-	
+	UploadType type() default UploadType.IMAGE;
+	DataProvider dataProvider() default @DataProvider(loadType=LoadType.LAZY,path="",resource=ResourceType.FILE);	
 }

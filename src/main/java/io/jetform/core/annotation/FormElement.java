@@ -37,7 +37,8 @@ public @interface FormElement {
 	Select select() default @Select();
 	Number number() default @Number();
 	Email email() default @Email();
-	Upload upload() default @Upload(dataProvider=@DataProvider(loadType=LoadType.LAZY,path="",resource=ResourceType.FILE),type=UploadType.TEXTFILE);	Radio radio() default @Radio(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));	
+	Upload upload() default @Upload();	
+	Radio radio() default @Radio(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));	
 	Checkbox checkbox() default @Checkbox(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));
 	Date date() default @Date();
 	Validation[] validations() default {};
