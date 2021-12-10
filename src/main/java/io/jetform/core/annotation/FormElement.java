@@ -33,6 +33,7 @@ public @interface FormElement {
 	
 	Form form() default @Form(childKey = "",parentKey = "");
 	Text text() default @Text();
+	TextArea textarea() default @TextArea;
 	Hidden hidden() default @Hidden;
 	Select select() default @Select();
 	Number number() default @Number();

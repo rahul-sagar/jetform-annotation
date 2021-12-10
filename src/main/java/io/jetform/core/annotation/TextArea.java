@@ -10,13 +10,6 @@ import java.lang.annotation.Target;
 @Target(FIELD)
 @EnableFormBuilder
 public @interface TextArea {
-	String placeHolder() default "Write somthing";
-	
-    String label() default "";
-	
-    boolean required() default false;
-	
-	String errorMessage() default "";
-    int rows() default 4;
+    int rows() default 5;
     int cols() default 50;
 }
