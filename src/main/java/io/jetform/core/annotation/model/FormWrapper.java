@@ -2,6 +2,7 @@ package io.jetform.core.annotation.model;
 
 import java.lang.reflect.Field;
 
+import io.jetform.core.annotation.Form;
 import io.jetform.core.annotation.FormElement;
 import io.jetform.core.enums.FieldType;
 
@@ -11,8 +12,21 @@ public class FormWrapper extends FormElementWrapper{
 	private String mappingClass;
 	private String parentKey;
 	private String childKey;
+	private JetFormWrapper jetFormWrapper;
 	
 	public FormWrapper() {
+	}
+	
+	public FormWrapper(Form form,JetFormWrapper formWrapper) {
+		setFieldType(FieldType.FORM.name());
+		setFormClass(form.formClass());
+		setFormWrapper(formWrapper);
+	}
+	
+	public FormWrapper(Form form) {
+		setFieldType(FieldType.FORM.name());
+		setFormClass(form.formClass());
+		//setFormWrapper(formWrapper);
 	}
 	
 	public FormWrapper(Field field, Class clazz) {
@@ -38,6 +52,7 @@ public class FormWrapper extends FormElementWrapper{
 		setFormClass(packageName);
 		setMappingClass(packageName+"."+type.getSimpleName());
 	}
+	
 	public String getFormClass() {
 		return formClass;
 	}
@@ -61,6 +76,14 @@ public class FormWrapper extends FormElementWrapper{
 	}
 	public void setChildKey(String childKey) {
 		this.childKey = childKey;
+	}
+
+	public JetFormWrapper getFormWrapper() {
+		return jetFormWrapper;
+	}
+
+	public void setFormWrapper(JetFormWrapper jetFormWrapper) {
+		this.jetFormWrapper = jetFormWrapper;
 	}
 	
 }
