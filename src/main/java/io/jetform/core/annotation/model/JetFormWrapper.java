@@ -8,6 +8,7 @@ public class JetFormWrapper {
 	private String id;
 	private String name;
 	private String title;
+	private String filter;
 	private boolean listIndex;
 	private boolean selectable;
 	private List<FormActionWrapper> actions;
@@ -78,9 +79,19 @@ public class JetFormWrapper {
 		this.selectable = selectable;
 	}
 
+	public String getFilter() {
+		return filter;
+	}
+
+	public void setFilter(String filter) {
+		this.filter = filter;
+	}
+
 	@Override
 	public String toString() {
-		return "JetFormWrapper [id=" + id + ", name=" + name + ", title=" + title + ", listIndex=" + listIndex
-				+ ", selectable=" + selectable + ", actions=" + actions + ", elements=" + elements + "]";
-	}	
+		return "JetFormWrapper [id=" + id + ", name=" + name + ", title=" + title + ", filter=" + filter
+				+ ", listIndex=" + listIndex + ", selectable=" + selectable + ", actions=" + actions + ", elements="
+				+ elements + "]";
+	}
+
 }

@@ -20,7 +20,7 @@ public class FormWrapper extends FormElementWrapper{
 	public FormWrapper(Form form,JetFormWrapper formWrapper) {
 		setFieldType(FieldType.FORM.name());
 		setFormClass(form.formClass());
-		setFormWrapper(formWrapper);
+		setJetFormWrapper(formWrapper);
 	}
 	
 	public FormWrapper(Form form) {
@@ -78,11 +78,11 @@ public class FormWrapper extends FormElementWrapper{
 		this.childKey = childKey;
 	}
 
-	public JetFormWrapper getFormWrapper() {
+	public JetFormWrapper getJetFormWrapper() {
 		return jetFormWrapper;
 	}
 
-	public void setFormWrapper(JetFormWrapper jetFormWrapper) {
+	public void setJetFormWrapper(JetFormWrapper jetFormWrapper) {
 		this.jetFormWrapper = jetFormWrapper;
 	}
 	

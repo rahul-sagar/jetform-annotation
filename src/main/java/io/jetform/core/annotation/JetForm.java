@@ -17,4 +17,5 @@ public @interface JetForm {
     boolean listIndex() default true;
     boolean selectable() default true;
     FormAction [] actions();
+    String filter() default "";
 }

@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Retention(RUNTIME)
 @Target({ TYPE, FIELD, METHOD })
 public @interface Form {
-	String formClass() default "" ;
+	String formClass() default "";
 	String mappingClass() default "" ;
 	String parentKey() default "";
 	String childKey() default "";
