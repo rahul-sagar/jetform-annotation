@@ -11,6 +11,7 @@ public interface ElementWrapper {
 	public boolean isDisabled();
 	public boolean isListable();
 	public boolean isAutoComplete();
+	public String getDependField();
 	public String getFieldType();
 	public String getValue();
 	public List<Validation> getValidations(); 

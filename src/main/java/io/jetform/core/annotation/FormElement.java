@@ -24,6 +24,7 @@ public @interface FormElement {
 	String value() default "";
 	String placeHolder() default "Enter Some Text  ";
 	String errorMessage() default "";
+	String dependField() default "";
 	
 	boolean required() default false;
 	boolean readOnly() default false;

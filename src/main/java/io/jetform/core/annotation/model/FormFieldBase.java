@@ -113,4 +113,9 @@ public class FormFieldBase implements ElementWrapper{
 	public void setAutoComplete(boolean autoComplete) {
 		this.autoComplete = autoComplete;
 	}
+	@Override
+	public String getDependField() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
