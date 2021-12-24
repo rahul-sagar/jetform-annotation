@@ -3,6 +3,7 @@ package io.jetform.core.annotation.model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import io.jetform.core.enums.FieldType;
 
 public class FormElementWrapper implements ElementWrapper {
@@ -20,6 +21,15 @@ public class FormElementWrapper implements ElementWrapper {
 	protected boolean autoComplete = false;
 	protected String fieldType = FieldType.TEXT.name();
 	protected List<Validation> validations = new ArrayList<>();
+    protected List<DependentField> dependentFields = new ArrayList();
+	
+	public List<DependentField> getDependentFields() {
+		return dependentFields;
+	}
+
+	public void setDependentFields(List<DependentField> dependentFields) {
+		this.dependentFields = dependentFields;
+	}
 
 	public String getId() {
 		return id;

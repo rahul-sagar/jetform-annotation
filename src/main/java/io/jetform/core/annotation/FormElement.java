@@ -32,6 +32,7 @@ public @interface FormElement {
 	boolean listable() default true;
 	boolean autocomplete() default false;
 	
+	DependentField[] dependentFields() default {};
 	Form form() default @Form(childKey = "",parentKey = "");
 	Text text() default @Text();
 	TextArea textarea() default @TextArea;

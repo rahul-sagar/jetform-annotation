@@ -15,4 +15,5 @@ public interface ElementWrapper {
 	public String getFieldType();
 	public String getValue();
 	public List<Validation> getValidations(); 
+	public List<DependentField> getDependentFields();
 }

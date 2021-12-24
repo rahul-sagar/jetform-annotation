@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import io.jetform.core.annotation.FormElement;
+import io.jetform.core.annotation.model.DependentField;
 import io.jetform.core.annotation.model.Validation;
 
 public interface JetFormUtils {
@@ -15,6 +16,13 @@ public interface JetFormUtils {
 		      .collect(Collectors.toList());
 		
 	}
+    
+    public static List<DependentField> getDependentFields(FormElement formElement){
+    	
+    	return Arrays.stream(formElement.dependentFields())
+  	          .map(dependentField-> new DependentField(dependentField.child(),dependentField.datapath(),dependentField.type()))
+  	          .collect(Collectors.toList());
+    }
 
 	public static String createLabel(String label) {
 

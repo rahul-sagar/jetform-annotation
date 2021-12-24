@@ -118,4 +118,9 @@ public class FormFieldBase implements ElementWrapper{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public List<DependentField> getDependentFields() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
