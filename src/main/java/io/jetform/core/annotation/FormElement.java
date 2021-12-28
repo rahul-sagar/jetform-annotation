@@ -44,5 +44,6 @@ public @interface FormElement {
 	Radio radio() default @Radio(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));	
 	Checkbox checkbox() default @Checkbox(dataProvider = @DataProvider(loadType = LoadType.LAZY,path = "",resource = ResourceType.WEB));
 	Date date() default @Date();
+	CustomField customField() default @CustomField();
 	Validation[] validations() default {};
 }
