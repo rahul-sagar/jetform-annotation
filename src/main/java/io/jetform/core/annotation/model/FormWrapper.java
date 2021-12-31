@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import io.jetform.core.annotation.Form;
 import io.jetform.core.annotation.FormElement;
 import io.jetform.core.enums.FieldType;
+import io.jetform.core.enums.Relation;
 
 
 public class FormWrapper extends FormElementWrapper{
@@ -12,6 +13,7 @@ public class FormWrapper extends FormElementWrapper{
 	private String mappingClass;
 	private String parentKey;
 	private String childKey;
+	private Relation relation;
 	private JetFormWrapper jetFormWrapper;
 	
 	public FormWrapper() {
@@ -21,11 +23,13 @@ public class FormWrapper extends FormElementWrapper{
 		setFieldType(FieldType.FORM.name());
 		setFormClass(form.formClass());
 		setJetFormWrapper(formWrapper);
+		setRelation(form.relation());
 	}
 	
 	public FormWrapper(Form form) {
 		setFieldType(FieldType.FORM.name());
 		setFormClass(form.formClass());
+		
 		//setFormWrapper(formWrapper);
 	}
 	
@@ -84,6 +88,14 @@ public class FormWrapper extends FormElementWrapper{
 
 	public void setJetFormWrapper(JetFormWrapper jetFormWrapper) {
 		this.jetFormWrapper = jetFormWrapper;
+	}
+
+	public Relation getRelation() {
+		return relation;
+	}
+
+	public void setRelation(Relation relation) {
+		this.relation = relation;
 	}
 	
 }

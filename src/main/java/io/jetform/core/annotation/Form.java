@@ -9,6 +9,9 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import io.jetform.core.enums.FieldType;
+import io.jetform.core.enums.Relation;
+
 @Documented
 @Retention(RUNTIME)
 @Target({ TYPE, FIELD, METHOD })
@@ -17,6 +20,7 @@ public @interface Form {
 	String mappingClass() default "" ;
 	String parentKey() default "";
 	String childKey() default "";
+	Relation relation() default Relation.ONE_TO_ONE;
 	//String label() default ""; 
 	//String listClass() default "";
 	//boolean editable() default false;	
