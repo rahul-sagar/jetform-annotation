@@ -22,6 +22,7 @@ public class FormElementWrapper implements ElementWrapper {
 	protected String fieldType = FieldType.TEXT.name();
 	protected List<Validation> validations = new ArrayList<>();
     protected List<DependentField> dependentFields = new ArrayList();
+    protected String group;
 	
 	public List<DependentField> getDependentFields() {
 		return dependentFields;
@@ -111,13 +112,6 @@ public class FormElementWrapper implements ElementWrapper {
 		this.validations = validations;
 	}
 
-	@Override
-	public String toString() {
-		return "FormElementWrapper [id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
-				+ ", placeHolder=" + placeHolder + ", readOnly=" + readOnly + ", disabled=" + disabled + ", listable="
-				+ listable + ", fieldType=" + fieldType + ", validations=" + validations + "]";
-	}
-
 	public boolean isAutoComplete() {
 		// TODO Auto-generated method stub
 		return this.autoComplete;
@@ -134,4 +128,22 @@ public class FormElementWrapper implements ElementWrapper {
 	public void setDependField(String dependField) {
 		this.dependField = dependField;
 	}
+
+	public void setGroup(String group) {
+		this.group = group;
+	}
+
+	public String getGroup() {
+		return group;
+	}
+	
+	@Override
+	public String toString() {
+		return "FormElementWrapper [id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
+				+ ", placeHolder=" + placeHolder + ", dependField=" + dependField + ", readOnly=" + readOnly
+				+ ", disabled=" + disabled + ", listable=" + listable + ", autoComplete=" + autoComplete
+				+ ", fieldType=" + fieldType + ", validations=" + validations + ", dependentFields=" + dependentFields
+				+ ", group=" + group + "]";
+	}
+
 }

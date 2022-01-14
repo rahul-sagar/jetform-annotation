@@ -16,4 +16,6 @@ public interface ElementWrapper {
 	public String getValue();
 	public List<Validation> getValidations(); 
 	public List<DependentField> getDependentFields();
+	public String getGroup();
+
 }

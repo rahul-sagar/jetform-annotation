@@ -46,4 +46,5 @@ public @interface FormElement {
 	Date date() default @Date();
 	CustomField customField() default @CustomField();
 	Validation[] validations() default {};
+	String group() default "";
 }

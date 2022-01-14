@@ -2,6 +2,7 @@ package io.jetform.core.annotation.model;
 
 import java.util.List;
 
+import io.jetform.core.annotation.FormElementGroup;
 import io.jetform.core.annotation.JetForm;
 
 public class JetFormWrapper {
@@ -11,15 +12,18 @@ public class JetFormWrapper {
 	private String filter;
 	private boolean listIndex;
 	private boolean selectable;
+	private String formTemplate;
 	private List<FormActionWrapper> actions;
 	private List<FormElementWrapper> elements;
-
+    private List<FormElementGroupWrapper> groups;
+	
 	public JetFormWrapper(JetForm jetForm){
 		this.id = jetForm.id();
 		this.name = jetForm.name();
 		this.title = jetForm.title();
 		this.listIndex=jetForm.listIndex();
 		this.selectable=jetForm.selectable();
+		this.formTemplate=jetForm.formTemplate();
 	}
 
 	public String getId() {
@@ -87,11 +91,28 @@ public class JetFormWrapper {
 		this.filter = filter;
 	}
 
+	public List<FormElementGroupWrapper> getGroups() {
+		return groups;
+	}
+
+	public void setGroups(List<FormElementGroupWrapper> groups) {
+		this.groups = groups;
+	}
+
+	public String getFormTemplate() {
+		return formTemplate;
+	}
+
+	public void setFormTemplate(String formTemplate) {
+		this.formTemplate = formTemplate;
+	}
+
 	@Override
 	public String toString() {
 		return "JetFormWrapper [id=" + id + ", name=" + name + ", title=" + title + ", filter=" + filter
-				+ ", listIndex=" + listIndex + ", selectable=" + selectable + ", actions=" + actions + ", elements="
-				+ elements + "]";
+				+ ", listIndex=" + listIndex + ", selectable=" + selectable + ", formTemplate=" + formTemplate
+				+ ", actions=" + actions + ", elements=" + elements + ", groups=" + groups + "]";
 	}
 
+	
 }

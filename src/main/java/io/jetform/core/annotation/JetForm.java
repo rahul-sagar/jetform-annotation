@@ -18,4 +18,6 @@ public @interface JetForm {
     boolean selectable() default true;
     FormAction [] actions();
     String filter() default "";
+    String formTemplate() default "";
+    FormElementGroup[] groups() default {};
 }
