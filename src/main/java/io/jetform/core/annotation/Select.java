@@ -34,5 +34,5 @@ public @interface Select {
 	DataProvider dataProvider() default @DataProvider(resource = ResourceType.WEB);
 	//String callBackUrl() default "";
 	String[] options() default {};
-	
+	boolean searchable() default false;
 }

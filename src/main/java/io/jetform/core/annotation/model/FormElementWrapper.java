@@ -22,6 +22,24 @@ public class FormElementWrapper implements ElementWrapper {
 	protected String fieldType = FieldType.TEXT.name();
 	protected List<Validation> validations = new ArrayList<>();
     protected List<DependentField> dependentFields = new ArrayList();
+    protected List<FormElementEventWrapper> events = new ArrayList();
+    public List<FormElementEventWrapper> getEvents() {
+		return events;
+	}
+
+	public void setEvents(List<FormElementEventWrapper> events) {
+		this.events = events;
+	}
+
+	public List<FormElementEventSubscriptionWrapper> getSubscribeEvents() {
+		return subscribeEvents;
+	}
+
+	public void setSubscribeEvents(List<FormElementEventSubscriptionWrapper> subscribeEvents) {
+		this.subscribeEvents = subscribeEvents;
+	}
+
+	protected List<FormElementEventSubscriptionWrapper> subscribeEvents = new ArrayList();
     protected String group;
 	
 	public List<DependentField> getDependentFields() {
@@ -136,14 +154,14 @@ public class FormElementWrapper implements ElementWrapper {
 	public String getGroup() {
 		return group;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "FormElementWrapper [id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
 				+ ", placeHolder=" + placeHolder + ", dependField=" + dependField + ", readOnly=" + readOnly
 				+ ", disabled=" + disabled + ", listable=" + listable + ", autoComplete=" + autoComplete
 				+ ", fieldType=" + fieldType + ", validations=" + validations + ", dependentFields=" + dependentFields
-				+ ", group=" + group + "]";
+				+ ", events=" + events + ", event=" + subscribeEvents + ", group=" + group + "]";
 	}
 
 }

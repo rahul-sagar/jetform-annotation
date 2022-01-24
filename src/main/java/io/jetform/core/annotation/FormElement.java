@@ -25,6 +25,7 @@ public @interface FormElement {
 	String placeHolder() default "Enter Some Text  ";
 	String errorMessage() default "";
 	String dependField() default "";
+	String group() default "";
 	
 	boolean required() default false;
 	boolean readOnly() default false;
@@ -32,6 +33,8 @@ public @interface FormElement {
 	boolean listable() default true;
 	boolean autocomplete() default false;
 	
+	FormElementEvent[] events() default {};
+	FormElementEventSubscription[] subscribeEvents() default {};
 	DependentField[] dependentFields() default {};
 	Form form() default @Form(childKey = "",parentKey = "");
 	Text text() default @Text();
@@ -46,5 +49,5 @@ public @interface FormElement {
 	Date date() default @Date();
 	CustomField customField() default @CustomField();
 	Validation[] validations() default {};
-	String group() default "";
+	
 }
