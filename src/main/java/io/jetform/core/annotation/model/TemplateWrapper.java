@@ -1,18 +1,18 @@
 package io.jetform.core.annotation.model;
 
-import io.jetform.core.annotation.CustomField;
+import io.jetform.core.annotation.Template;
 import io.jetform.core.enums.FieldType;
 
-public class CustomFieldWrapper extends FormElementWrapper{
+public class TemplateWrapper extends FormElementWrapper{
    private String filePath;
    
-   public CustomFieldWrapper() {
+   public TemplateWrapper() {
 	// TODO Auto-generated constructor stub
    }
    
-   public CustomFieldWrapper(CustomField customField) {
-	      setFilePath(customField.filePath());
-	      setFieldType(FieldType.CUSTOM_FIELD.name());
+   public TemplateWrapper(Template template) {
+	      setFilePath(template.filePath());
+	      setFieldType(FieldType.TEMPLATE.name());
    }
   
    public String getFilePath() {
