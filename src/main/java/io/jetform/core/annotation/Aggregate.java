@@ -6,9 +6,13 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import io.jetform.core.enums.AggregationType;
+
+
 
 @Retention(RUNTIME)
 @Target(FIELD)
-public @interface FormElementEvent {
-  String name() default "";
+public @interface Aggregate {
+  String element() default "";
+  AggregationType type() default AggregationType.SUM;
 }

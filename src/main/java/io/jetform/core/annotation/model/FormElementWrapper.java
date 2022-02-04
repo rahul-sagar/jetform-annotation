@@ -20,9 +20,14 @@ public class FormElementWrapper implements ElementWrapper {
 	protected boolean listable = false;
 	protected boolean autoComplete = false;
 	protected String fieldType = FieldType.TEXT.name();
+	protected AggregateWrapper aggregate;
+
 	protected List<Validation> validations = new ArrayList<>();
     protected List<DependentField> dependentFields = new ArrayList();
     protected List<FormElementEventWrapper> events = new ArrayList();
+    protected List<FormElementEventSubscriptionWrapper> subscribeEvents = new ArrayList();
+    protected String group;
+    
     public List<FormElementEventWrapper> getEvents() {
 		return events;
 	}
@@ -38,9 +43,6 @@ public class FormElementWrapper implements ElementWrapper {
 	public void setSubscribeEvents(List<FormElementEventSubscriptionWrapper> subscribeEvents) {
 		this.subscribeEvents = subscribeEvents;
 	}
-
-	protected List<FormElementEventSubscriptionWrapper> subscribeEvents = new ArrayList();
-    protected String group;
 	
 	public List<DependentField> getDependentFields() {
 		return dependentFields;
@@ -131,7 +133,6 @@ public class FormElementWrapper implements ElementWrapper {
 	}
 
 	public boolean isAutoComplete() {
-		// TODO Auto-generated method stub
 		return this.autoComplete;
 	}
 
@@ -154,14 +155,23 @@ public class FormElementWrapper implements ElementWrapper {
 	public String getGroup() {
 		return group;
 	}
+	
+	public AggregateWrapper getAggregate() {
+		return aggregate;
+	}
+
+	public void setAggregate(AggregateWrapper aggregate) {
+		this.aggregate = aggregate;
+	}
 
 	@Override
 	public String toString() {
 		return "FormElementWrapper [id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
 				+ ", placeHolder=" + placeHolder + ", dependField=" + dependField + ", readOnly=" + readOnly
 				+ ", disabled=" + disabled + ", listable=" + listable + ", autoComplete=" + autoComplete
-				+ ", fieldType=" + fieldType + ", validations=" + validations + ", dependentFields=" + dependentFields
-				+ ", events=" + events + ", event=" + subscribeEvents + ", group=" + group + "]";
+				+ ", fieldType=" + fieldType + ", aggregate=" + aggregate + ", validations=" + validations
+				+ ", dependentFields=" + dependentFields + ", events=" + events + ", subscribeEvents=" + subscribeEvents
+				+ ", group=" + group + "]";
 	}
 
 }

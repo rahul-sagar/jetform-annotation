@@ -11,7 +11,6 @@ import java.lang.annotation.Target;
 
 import io.jetform.core.enums.LoadType;
 import io.jetform.core.enums.ResourceType;
-import io.jetform.core.enums.UploadType;
 
 @Radio
 @Documented
@@ -33,6 +32,7 @@ public @interface FormElement {
 	boolean listable() default true;
 	boolean autocomplete() default false;
 	
+	Aggregate aggregate() default @Aggregate();
 	FormElementEvent[] events() default {};
 	FormElementEventSubscription[] subscribeEvents() default {};
 	DependentField[] dependentFields() default {};

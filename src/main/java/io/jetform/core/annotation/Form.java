@@ -9,7 +9,6 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import io.jetform.core.enums.FieldType;
 import io.jetform.core.enums.Relation;
 
 @Documented
