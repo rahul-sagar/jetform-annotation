@@ -14,6 +14,7 @@ public class FormWrapper extends FormElementWrapper{
 	private String parentKey;
 	private String childKey;
 	private Relation relation;
+	private boolean inline;
 	private JetFormWrapper jetFormWrapper;
 	
 	public FormWrapper() {
@@ -24,12 +25,13 @@ public class FormWrapper extends FormElementWrapper{
 		setFormClass(form.formClass());
 		setJetFormWrapper(formWrapper);
 		setRelation(form.relation());
+		setInline(form.inline());
 	}
 	
 	public FormWrapper(Form form) {
 		setFieldType(FieldType.FORM.name());
 		setFormClass(form.formClass());
-		
+		setRelation(form.relation());
 		//setFormWrapper(formWrapper);
 	}
 	
@@ -96,6 +98,14 @@ public class FormWrapper extends FormElementWrapper{
 
 	public void setRelation(Relation relation) {
 		this.relation = relation;
+	}
+
+	public boolean isInline() {
+		return inline;
+	}
+
+	public void setInline(boolean inline) {
+		this.inline = inline;
 	}
 	
 }

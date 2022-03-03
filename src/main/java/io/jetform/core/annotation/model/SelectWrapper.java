@@ -13,6 +13,7 @@ public class SelectWrapper extends FormElementWrapper {
 	private DataProvider dataProvider;
 	private boolean multiSelect;
 	private String[] options;
+	private OptionsBundleWrapper bundle;
 	
 	public String[] getOptions() {
 		return options;
@@ -31,6 +32,7 @@ public class SelectWrapper extends FormElementWrapper {
 		this.setMultiSelect(select.multiSelect());
 		this.setFieldType(FieldType.SELECT.name());
 		check(select);
+		this.setBundle(new OptionsBundleWrapper(select));
 	}
 	
 	public SelectWrapper(FormElement formField) {
@@ -83,5 +85,21 @@ public class SelectWrapper extends FormElementWrapper {
 	public void setMultiSelect(boolean multiSelect) {
 		this.multiSelect = multiSelect;
 	}
+
+	public OptionsBundleWrapper getBundle() {
+		return bundle;
+	}
+
+	public void setBundle(OptionsBundleWrapper bundle) {
+		this.bundle = bundle;
+	}
+
+	@Override
+	public String toString() {
+		return "SelectWrapper [dataProvider=" + dataProvider + ", multiSelect=" + multiSelect + ", options="
+				+ Arrays.toString(options) + ", bundle=" + bundle + "]";
+	}
+	
+	
 	
 }

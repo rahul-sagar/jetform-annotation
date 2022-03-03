@@ -20,6 +20,7 @@ public @interface Form {
 	String parentKey() default "";
 	String childKey() default "";
 	Relation relation() default Relation.ONE_TO_ONE;
+	boolean inline() default false;
 	//String label() default ""; 
 	//String listClass() default "";
 	//boolean editable() default false;	

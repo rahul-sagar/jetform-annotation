@@ -17,5 +17,7 @@ public interface ElementWrapper {
 	public List<Validation> getValidations(); 
 	public List<DependentField> getDependentFields();
 	public String getGroup();
+	public AggregateWrapper getAggregate();
+	/* public RelationWrapper getRelation(); */
 
 }

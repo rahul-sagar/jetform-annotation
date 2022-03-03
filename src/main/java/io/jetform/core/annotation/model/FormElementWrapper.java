@@ -21,12 +21,21 @@ public class FormElementWrapper implements ElementWrapper {
 	protected boolean autoComplete = false;
 	protected String fieldType = FieldType.TEXT.name();
 	protected AggregateWrapper aggregate;
+	protected RelationWrapper relationWrapper;
 
 	protected List<Validation> validations = new ArrayList<>();
     protected List<DependentField> dependentFields = new ArrayList();
     protected List<FormElementEventWrapper> events = new ArrayList();
     protected List<FormElementEventSubscriptionWrapper> subscribeEvents = new ArrayList();
     protected String group;
+    
+    public RelationWrapper getRelationWrapper() {
+		return relationWrapper;
+	}
+
+	public void setRelationWrapper(RelationWrapper relation) {
+		this.relationWrapper = relation;
+	}
     
     public List<FormElementEventWrapper> getEvents() {
 		return events;
@@ -169,9 +178,11 @@ public class FormElementWrapper implements ElementWrapper {
 		return "FormElementWrapper [id=" + id + ", name=" + name + ", label=" + label + ", value=" + value
 				+ ", placeHolder=" + placeHolder + ", dependField=" + dependField + ", readOnly=" + readOnly
 				+ ", disabled=" + disabled + ", listable=" + listable + ", autoComplete=" + autoComplete
-				+ ", fieldType=" + fieldType + ", aggregate=" + aggregate + ", validations=" + validations
-				+ ", dependentFields=" + dependentFields + ", events=" + events + ", subscribeEvents=" + subscribeEvents
-				+ ", group=" + group + "]";
+				+ ", fieldType=" + fieldType + ", aggregate=" + aggregate + ", relation=" + relationWrapper + ", validations="
+				+ validations + ", dependentFields=" + dependentFields + ", events=" + events + ", subscribeEvents="
+				+ subscribeEvents + ", group=" + group + "]";
 	}
+
+	
 
 }

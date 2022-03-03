@@ -35,4 +35,5 @@ public @interface Select {
 	//String callBackUrl() default "";
 	String[] options() default {};
 	boolean searchable() default false;
+	OptionsBundle bundle() default @OptionsBundle;
 }

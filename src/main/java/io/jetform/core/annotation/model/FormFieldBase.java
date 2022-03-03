@@ -128,4 +128,9 @@ public class FormFieldBase implements ElementWrapper{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public AggregateWrapper getAggregate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

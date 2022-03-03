@@ -32,6 +32,7 @@ public @interface FormElement {
 	boolean listable() default true;
 	boolean autocomplete() default false;
 	
+	Relation relation() default @Relation;
 	Aggregate aggregate() default @Aggregate();
 	FormElementEvent[] events() default {};
 	FormElementEventSubscription[] subscribeEvents() default {};
